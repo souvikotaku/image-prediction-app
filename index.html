@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My awesome image classifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content" >
+        <div style="display:flex;justify-content:center">
+            <img id="img" crossorigin="anonymous"></img>
+        </div>
+        <p id="prediction"></p>
+        <div class="form">
+            <input type="text" placeholder="enter image url" id="image_url">
+            <button id="submit_button">Predict!</button>
+
+            <h1>OR</h1>
+            <br/><input type="file" id="image2_url" ><br/>
+
+            <div style="width:100%;display:flex;justify-content:center">
+                <img style="width:25%;display:none" src="" id="img2" alt="image preview" crossorigin="anonymous"></img>
+            </div><br/>
+
+            <!-- <button id="submit_button2" on-click="upPic()">Upload!</button> -->
+
+        </div>
+    </div>
+
+    <!-- Load TensorFlow.js. This is required to use MobileNet. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.1"> </script> 
+    <!-- Load the MobileNet model. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
